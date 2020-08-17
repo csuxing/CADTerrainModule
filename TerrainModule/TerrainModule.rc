@@ -1,0 +1,153 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "TerrainModule ObjectARX application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TerrainModule"
+            VALUE "LegalCopyright", "Copyright ?2012"
+            VALUE "OriginalFilename", "AdskTerrainModule.arx"
+            VALUE "ProductName", "TerrainModule Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_Terrain DIALOGEX 0, 0, 509, 378
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "Terrain"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,198,357,50,14
+    PUSHBUTTON      "取消",IDCANCEL,351,357,50,14
+    GROUPBOX        "原始数据处理",IDC_STATIC,47,28,407,90
+    PUSHBUTTON      "选择卫星影像",IDC_BUTTON_PIC,373,39,60,14
+    PUSHBUTTON      "选择高程数据",IDC_BUTTON_HEIGHT,374,62,59,14
+    EDITTEXT        IDC_EDIT_PIC,63,39,283,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,63,63,283,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "生成金字塔",IDC_BUTTON_CreatePyramid,374,90,57,16
+    EDITTEXT        IDC_EDIT_layer,159,91,188,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "请输入金字塔的层数：",IDC_STATIC,67,94,81,16
+    GROUPBOX        "二维地形",IDC_STATIC_1,49,137,300,85
+    GROUPBOX        "三维地形",IDC_STATIC,49,232,301,97
+    PUSHBUTTON      "创建二维地形",IDC_BUTTON_CR2DTerrain,71,175,64,15
+    PUSHBUTTON      "创建三维地形",IDC_BUTTON_CR3DTerrain,73,274,73,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_Terrain, DIALOG
+    BEGIN
+        RIGHTMARGIN, 502
+        BOTTOMMARGIN, 371
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_Terrain AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "TerrainModule"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
