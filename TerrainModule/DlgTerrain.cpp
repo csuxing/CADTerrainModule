@@ -158,6 +158,7 @@ void CDlgTerrain::OnBnClickedButtonCreatepyramid()
 		CReadSrcFile::CreatePyramid(m_edit_layer,path_height,"dem");
 	}
 
+	AfxMessageBox(L"succss");
 	//create material lib
 }
 
@@ -186,8 +187,19 @@ void CDlgTerrain::OnBnClickedButtonCr2dterrain()
 	}
 	
 
-	std::string output,outputdir,filename;
-	CReadSrcFile::ProduceVirtualDem(ori_filepath,output);//create virtual dem
+	std::string output,outputdir,filename,input;
+
+	int position = ori_filepath.find_last_of("\\");
+	int position_point = ori_filepath.find_last_of(".");
+	string program_name = ori_filepath.substr(position + 1, position_point - position - 1);
+	input = ori_filepath.substr(0, position + 1) + program_name + "_VirtualDEM.bin";
+	output = input;
+
+	if (0!=_access(output.c_str(),0))
+	{
+		CReadSrcFile::ProduceVirtualDem(ori_filepath, output);//create virtual dem
+	}
+	
 
 	int o_position=output.find_last_of("\\");
 	int o_position_point=output.find_last_of(".");
@@ -208,7 +220,7 @@ void CDlgTerrain::OnBnClickedButtonCr2dterrain()
 
 	CCustomPolygonmesh *p = new CCustomPolygonmesh;
 
-	p->InitCustomShell("D:\\备份\\TerrainModule\\Data\\dem\\", "高程0");
+	p->InitCustomShell(EX_CDynamic2CDlgTerrain, programName + "0");
 
 	p->setMaterial(MapMaterial["L0_0_0"]);
 	AcDbObjectId id=CPostToModelSpace::PostToModelSpace(p);

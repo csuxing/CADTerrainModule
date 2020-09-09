@@ -708,7 +708,6 @@ void CReadSrcFile::CreatePyramid(int depth,string inputfilepathname,std::string 
 		HeadFile headfile;
 		ReadASCIIHeadfile(inname, headfile);
 		CReadSrcFile::TerrainBlock(j+1, inname, outputfilepath, headfile,oriheadfile);
-
 	}
 }
 /***

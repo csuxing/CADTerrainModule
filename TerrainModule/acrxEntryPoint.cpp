@@ -111,6 +111,8 @@ public:
 	}
 
 	static void AdskMyGroupCTerrain() {
+		//CReadSrcFile::readtifftodem("G:\\川藏高清影像\\影像.tif", "");
+		//CReadSrcFile::CreatePyramid(8, "G:\\川藏高清影像\\川藏", "dem");
 		// Put your command code here
 		//CustomBoost::BoostGraphic::DigHole("D:\\备份\\TerrainModule\\Data\\高程.tif", "D:\\备份\\TerrainModule\\Data\\hole2.txt", 3);
 		CDlgTerrain *pt = new CDlgTerrain;
