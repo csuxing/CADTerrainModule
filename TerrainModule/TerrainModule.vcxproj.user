@@ -3,4 +3,8 @@
   <PropertyGroup>
     <RESOURCE_FILE>TerrainModule.rc</RESOURCE_FILE>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommand>E:\工作软件\CAD2016\AutoCAD 2016\acad.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>
